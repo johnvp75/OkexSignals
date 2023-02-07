@@ -39,7 +39,8 @@ public class CheckForExtreameGrowupOkex {
 	        		highPrice=candels.getJSONArray(j).getDouble(2);
 	        }
     		if (highPrice/openPrice*100-100>percentOfGrowup) {
-    			otvet=otvet+stringOfSymbols.get(i).getName()+" growUp on "+String.format("%,.2f",highPrice/openPrice*100-100)+"%"+"\n";
+    			String format="%,."+stringOfSymbols.get(i).getPrecision()+"f";
+    			otvet=otvet+stringOfSymbols.get(i).getName()+" growUp on "+String.format("%,.2f",highPrice/openPrice*100-100)+"%"+"\n Goal price is "+String.format(format,openPrice*1.3);
     		}
 
 		}

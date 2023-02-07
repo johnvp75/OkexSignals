@@ -87,7 +87,7 @@ public class StartServiceForOkex {
         	if (fiboValueForPosition!=null) { 
         		System.out.println(fAllSymbols.get(i).getName()+" is checked");
         		chat.sendMessage("OKX margin "+fAllSymbols.get(i).getName()+" is checked");
-        		chat.sendMessage(fiboValueForPosition.asStringWithParcent(fAllSymbols.get(i).getPrecition()));
+        		chat.sendMessage(fiboValueForPosition.asStringWithParcent(fAllSymbols.get(i).getPrecision()));
         	}
         }
 		
@@ -107,8 +107,9 @@ public class StartServiceForOkex {
         for (int i=0;i<symbols.length();i++) {
         	JSONObject symbol=symbols.getJSONObject(i);
         	if (symbol.getString("instId").indexOf("-USDT-")!=-1) {
-        		Pair ticket=new Pair(symbol.getString("instId"));
-        		ticket.setTickSz(symbol.getString("tickSz"));
+        		Pair ticket=new Pair(symbol);
+//        		Pair ticket=new Pair(symbol.getString("instId"));
+//        		ticket.setTickSz(symbol.getString("tickSz"));
 //        		ticket.setPrecition();
         		allSymbols.add(ticket);
         	}

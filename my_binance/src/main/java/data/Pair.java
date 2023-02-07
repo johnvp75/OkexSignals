@@ -1,5 +1,7 @@
 package data;
 
+import org.json.JSONObject;
+
 public class Pair {
 	private int Id;
 	private String name;
@@ -12,9 +14,9 @@ public class Pair {
 	private String settleCcy;
 	private double ctVal;
 	private int ctMult;
-	private int ctValCcy;
-	private char optType;
-	private double stk;
+	private String ctValCcy;
+	private String optType;
+	private String stk;
 	private long listTime;
 	private long expTime;
 	private int lever;
@@ -24,18 +26,54 @@ public class Pair {
 	private String ctType;
 	private String alias;
 	private String state;
-	private int maxLmtSz;
+	private long maxLmtSz;
 	private int maxMktSz;
-	private int maxTwapSz;
-	private int maxIcebergSz;
-	private int maxTriggerSz;
+	private long maxTwapSz;
+	private long maxIcebergSz;
+	private long maxTriggerSz;
 	private int maxStopSz;
 	
+	public Pair() {
+		
+	}
 	
 	public Pair(String name) {
 		this.name=name;
 	}
 
+	public Pair(JSONObject pair) {
+		
+		setInstType(pair.getString("instType"));
+		setName(pair.getString("instId"));
+		setUly(pair.getString("uly"));
+		setInstFamily(pair.getString("instFamily"));
+		setBaseCcy(pair.getString("baseCcy"));
+		setQuoteCcy(pair.getString("quoteCcy"));
+		setSettleCcy(pair.getString("settleCcy"));
+		setCtVal(pair.getDouble("ctVal"));
+		setCtMult(pair.getInt("ctMult"));
+		setCtValCcy(pair.getString("ctValCcy"));
+		setOptType(pair.getString("optType"));
+		setStk(pair.getString("stk"));
+		setListTime(pair.getLong("listTime"));
+//		if(pair.getString("expTime").isEmpty())
+//			pair.;
+		setExpTime(pair.optLong("expTime"));
+		setLever(pair.getInt("lever"));
+		setTickSz(pair.getString("tickSz"));
+		setLotSz(pair.getInt("lotSz"));
+		setMinSz(pair.getInt("minSz"));
+		setCtType(pair.getString("ctType"));
+		setAlias(pair.getString("alias"));
+		setState(pair.getString("state"));
+		setMaxLmtSz(pair.getLong("maxLmtSz"));
+		setMaxMktSz(pair.getInt("maxMktSz"));
+		setMaxTwapSz(pair.getLong("maxTwapSz"));
+		setMaxIcebergSz(pair.getLong("maxIcebergSz"));
+		setMaxTriggerSz(pair.getLong("maxTriggerSz"));
+		setMaxStopSz(pair.getInt("maxStopSz"));
+		
+	}
 	/**
 	 * @return the name
 	 */
@@ -46,7 +84,7 @@ public class Pair {
 	/**
 	 * @return the precision
 	 */
-	public int getPrecition() {
+	public int getPrecision() {
 		return getTickSz().length()-2;
 	}
 
@@ -57,12 +95,6 @@ public class Pair {
 		this.name = name;
 	}
 
-	/**
-	 * @return the precision
-	 */
-	public int getPrecision() {
-		return precision;
-	}
 
 	/**
 	 * @return the instType
@@ -123,21 +155,21 @@ public class Pair {
 	/**
 	 * @return the ctValCcy
 	 */
-	public int getCtValCcy() {
+	public String getCtValCcy() {
 		return ctValCcy;
 	}
 
 	/**
 	 * @return the optType
 	 */
-	public char getOptType() {
+	public String getOptType() {
 		return optType;
 	}
 
 	/**
 	 * @return the stk
 	 */
-	public double getStk() {
+	public String getStk() {
 		return stk;
 	}
 
@@ -207,7 +239,7 @@ public class Pair {
 	/**
 	 * @return the maxLmtSz
 	 */
-	public int getMaxLmtSz() {
+	public long getMaxLmtSz() {
 		return maxLmtSz;
 	}
 
@@ -221,21 +253,21 @@ public class Pair {
 	/**
 	 * @return the maxTwapSz
 	 */
-	public int getMaxTwapSz() {
+	public long getMaxTwapSz() {
 		return maxTwapSz;
 	}
 
 	/**
 	 * @return the maxIcebergSz
 	 */
-	public int getMaxIcebergSz() {
+	public long getMaxIcebergSz() {
 		return maxIcebergSz;
 	}
 
 	/**
 	 * @return the maxTriggerSz
 	 */
-	public int getMaxTriggerSz() {
+	public long getMaxTriggerSz() {
 		return maxTriggerSz;
 	}
 
@@ -312,21 +344,21 @@ public class Pair {
 	/**
 	 * @param ctValCcy the ctValCcy to set
 	 */
-	public void setCtValCcy(int ctValCcy) {
+	public void setCtValCcy(String ctValCcy) {
 		this.ctValCcy = ctValCcy;
 	}
 
 	/**
 	 * @param optType the optType to set
 	 */
-	public void setOptType(char optType) {
+	public void setOptType(String optType) {
 		this.optType = optType;
 	}
 
 	/**
 	 * @param stk the stk to set
 	 */
-	public void setStk(double stk) {
+	public void setStk(String stk) {
 		this.stk = stk;
 	}
 
@@ -396,7 +428,7 @@ public class Pair {
 	/**
 	 * @param maxLmtSz the maxLmtSz to set
 	 */
-	public void setMaxLmtSz(int maxLmtSz) {
+	public void setMaxLmtSz(long maxLmtSz) {
 		this.maxLmtSz = maxLmtSz;
 	}
 
@@ -410,21 +442,21 @@ public class Pair {
 	/**
 	 * @param maxTwapSz the maxTwapSz to set
 	 */
-	public void setMaxTwapSz(int maxTwapSz) {
+	public void setMaxTwapSz(long maxTwapSz) {
 		this.maxTwapSz = maxTwapSz;
 	}
 
 	/**
 	 * @param maxIcebergSz the maxIcebergSz to set
 	 */
-	public void setMaxIcebergSz(int maxIcebergSz) {
+	public void setMaxIcebergSz(long maxIcebergSz) {
 		this.maxIcebergSz = maxIcebergSz;
 	}
 
 	/**
 	 * @param maxTriggerSz the maxTriggerSz to set
 	 */
-	public void setMaxTriggerSz(int maxTriggerSz) {
+	public void setMaxTriggerSz(long maxTriggerSz) {
 		this.maxTriggerSz = maxTriggerSz;
 	}
 

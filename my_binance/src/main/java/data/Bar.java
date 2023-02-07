@@ -1,5 +1,7 @@
 package data;
 
+import org.json.JSONArray;
+
 //@Entity
 //@Table (name = "Bars")
 public class Bar {
@@ -24,11 +26,24 @@ public class Bar {
 	private double VolumeBaseCurrency;
 //	@Column
 	private double VolumeQuoteCurrency;
+//	@Column
+	private long openTime;
 	
 	public Bar() {
 		
 	}
 	
+	public Bar(JSONArray bar) {
+		setOpenTime(bar.getLong(0));
+		setOpenPrice(bar.getDouble(1));
+		setMaxPrice(bar.getDouble(2));
+		setMinPrice(bar.getDouble(3));
+		setClosePrice(bar.getDouble(4));
+		setVolume(bar.getDouble(5));
+		setVolumeBaseCurrency(bar.getDouble(6));
+		setVolumeQuoteCurrency(bar.getDouble(7));
+		
+	}
 	
 	
 	
@@ -104,6 +119,76 @@ public class Bar {
 	 */
 	public void setMaxPrice(double maxPrice) {
 		this.maxPrice = maxPrice;
+	}
+
+	/**
+	 * @return the pair
+	 */
+	public Pair getPair() {
+		return pair;
+	}
+
+	/**
+	 * @return the volume
+	 */
+	public double getVolume() {
+		return Volume;
+	}
+
+	/**
+	 * @return the volumeBaseCurrency
+	 */
+	public double getVolumeBaseCurrency() {
+		return VolumeBaseCurrency;
+	}
+
+	/**
+	 * @return the volumeQuoteCurrency
+	 */
+	public double getVolumeQuoteCurrency() {
+		return VolumeQuoteCurrency;
+	}
+
+	/**
+	 * @return the openTime
+	 */
+	public long getOpenTime() {
+		return openTime;
+	}
+
+	/**
+	 * @param pair the pair to set
+	 */
+	public void setPair(Pair pair) {
+		this.pair = pair;
+	}
+
+	/**
+	 * @param volume the volume to set
+	 */
+	public void setVolume(double volume) {
+		Volume = volume;
+	}
+
+	/**
+	 * @param volumeBaseCurrency the volumeBaseCurrency to set
+	 */
+	public void setVolumeBaseCurrency(double volumeBaseCurrency) {
+		VolumeBaseCurrency = volumeBaseCurrency;
+	}
+
+	/**
+	 * @param volumeQuoteCurrency the volumeQuoteCurrency to set
+	 */
+	public void setVolumeQuoteCurrency(double volumeQuoteCurrency) {
+		VolumeQuoteCurrency = volumeQuoteCurrency;
+	}
+
+	/**
+	 * @param openTime the openTime to set
+	 */
+	public void setOpenTime(long openTime) {
+		this.openTime = openTime;
 	}
 
 }

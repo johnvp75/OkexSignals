@@ -11,8 +11,6 @@ import org.json.JSONObject;
 
 import data.FiboLevel;
 import data.Pair;
-import my_binance.PrivateConfig;
-import my_binance.TelegrammChat;
 
 public class StartServiceForOkex {
 	private final int EVER_MINUTE=1;
@@ -110,7 +108,8 @@ public class StartServiceForOkex {
         	JSONObject symbol=symbols.getJSONObject(i);
         	if (symbol.getString("instId").indexOf("-USDT-")!=-1) {
         		Pair ticket=new Pair(symbol.getString("instId"));
-        		ticket.setPrecition(symbol.getString("tickSz").length()-2);
+        		ticket.setTickSz(symbol.getString("tickSz"));
+//        		ticket.setPrecition();
         		allSymbols.add(ticket);
         	}
         }

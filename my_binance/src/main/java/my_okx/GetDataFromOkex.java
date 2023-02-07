@@ -8,8 +8,6 @@ import java.util.GregorianCalendar;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import my_binance.PrivateConfig;
-
 public class GetDataFromOkex {
 	
 	final private static String OKX_API_URL=PrivateConfig.BASE_URL_OKX;

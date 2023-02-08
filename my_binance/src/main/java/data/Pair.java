@@ -1,36 +1,108 @@
 package data;
 
-import org.json.JSONObject;
+import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.json.JSONObject;
+@Entity
+@Table(name = "Pairs")
 public class Pair {
+	@Id
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int Id;
+	
+	@Column
 	private String name;
-	private int precision;
+	
+    @OneToMany(mappedBy = "pair", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Bar> bars;	
+	
+//	private int precision;
+	
+	@Column
 	private String instType;
+	
+	@Column
 	private String uly;
+	
+	@Column
 	private String instFamily;
+	
+	@Column
 	private String baseCcy;
+	
+	@Column
 	private String quoteCcy;
+	
+	@Column
 	private String settleCcy;
+	
+	@Column
 	private double ctVal;
+	
+	@Column
 	private int ctMult;
+	
+	@Column
 	private String ctValCcy;
+	
+	@Column
 	private String optType;
+	
+	@Column
 	private String stk;
+	
+	@Column
 	private long listTime;
+	
+	@Column
 	private long expTime;
+	
+	@Column
 	private int lever;
+	
+	@Column
 	private String tickSz;
+	
+	@Column
 	private int lotSz;
+	
+	@Column
 	private int minSz;
+	
+	@Column
 	private String ctType;
+	
+	@Column
 	private String alias;
+	
+	@Column
 	private String state;
+	
+	@Column
 	private long maxLmtSz;
+	
+	@Column
 	private int maxMktSz;
+	
+	@Column
 	private long maxTwapSz;
+	
+	@Column
 	private long maxIcebergSz;
+	
+	@Column
 	private long maxTriggerSz;
+	
+	@Column
 	private int maxStopSz;
 	
 	public Pair() {
@@ -281,9 +353,6 @@ public class Pair {
 	/**
 	 * @param precision the precision to set
 	 */
-	public void setPrecision(int precision) {
-		this.precision = precision;
-	}
 
 	/**
 	 * @param instType the instType to set

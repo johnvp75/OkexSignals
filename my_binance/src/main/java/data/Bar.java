@@ -1,32 +1,42 @@
 package data;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 import org.json.JSONArray;
 
-//@Entity
-//@Table (name = "Bars")
+@Entity
+@Table (name = "Bars")
 public class Bar {
-//	@Id
-//	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int id;
 	
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "Pair_id")
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "Pair_id")
 	private Pair pair;
-//	@Column
+	@Column
 	private double openPrice;
-//	@Column
+	@Column
 	private double closePrice;
-//	@Column
+	@Column
 	private double minPrice;
-//	@Column
+	@Column
 	private double maxPrice;
-//	@Column
+	@Column
 	private double Volume;
-//	@Column
+	@Column
 	private double VolumeBaseCurrency;
-//	@Column
+	@Column
 	private double VolumeQuoteCurrency;
-//	@Column
+	@Column
 	private long openTime;
 	
 	public Bar() {

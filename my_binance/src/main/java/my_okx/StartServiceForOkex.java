@@ -11,22 +11,25 @@ import org.json.JSONObject;
 
 import data.FiboLevel;
 import data.Pair;
+import services.PairService;
 
 public class StartServiceForOkex {
-	private final int EVER_MINUTE=1;
-	private final int EVER_HOUR=2;
-	private final int EVER_DAY=3;
+	private final static long EVER_MINUTE=60000;
+	private final static long EVER_HOUR=3600000;
+	private final static long EVER_DAY=24*3600000;
 	private final static String[] timeCheckForEnterPointOkex= {"9:55","10:55","11:55","12:55","13:55"};
 	private static TelegrammChat chat=new TelegrammChat(PrivateConfig.Telegramm_Bot_Token, PrivateConfig.Telegarmm_Chat_ID, PrivateConfig.Telegramm_Admin_User_Name);
 	private static GregorianCalendar lastStartCheckForExtreameGrowupOkex=new GregorianCalendar();
 	private static GregorianCalendar lastStartCheckForEnterPointOkex=new GregorianCalendar();
 	private static GregorianCalendar lastStartUpdatePairList=new GregorianCalendar();
+	private static GregorianCalendar lastStartCheckDataBasePairs=new GregorianCalendar();
 
 	public static void main(String[] args) {
 		final boolean stop=false;
 		boolean[] checkStartCheckForEnterPointOkex=new boolean[timeCheckForEnterPointOkex.length];
 		for (int i=0;i<checkStartCheckForEnterPointOkex.length;i++)
 			checkStartCheckForEnterPointOkex[i]=false;
+		checkDataBasePairs();
 		ArrayList<Pair> allPairs=updatePairList();
 		if (allPairs==null) {
     		System.out.println("Network error");
@@ -34,7 +37,8 @@ public class StartServiceForOkex {
     		return;
 		}
 		do {
-			if (new GregorianCalendar().getTimeInMillis()-lastStartUpdatePairList.getTimeInMillis()>86400000) {
+			if (new GregorianCalendar().getTimeInMillis()-lastStartUpdatePairList.getTimeInMillis()>StartServiceForOkex.EVER_DAY) {
+				
 				allPairs=updatePairList();
 				if (allPairs==null) {
 		    		System.out.println("Network error");
@@ -51,7 +55,7 @@ public class StartServiceForOkex {
 					checkStartCheckForEnterPointOkex[i]=true;
 				}
 			}
-			if (new GregorianCalendar().getTimeInMillis()-lastStartCheckForExtreameGrowupOkex.getTimeInMillis()>60000) {
+			if (new GregorianCalendar().getTimeInMillis()-lastStartCheckForExtreameGrowupOkex.getTimeInMillis()>EVER_MINUTE) {
 				lastStartCheckForExtreameGrowupOkex=new GregorianCalendar();
 				startCheckForExtreameGrowupOkex(allPairs);
 			}			
@@ -94,6 +98,7 @@ public class StartServiceForOkex {
 	}
 	private static ArrayList<Pair> updatePairList(){
 		System.out.println("OKX:Started updatePairList at: "+new Date());
+/*
 		Map<String, String> parameters=new HashMap<String, String>();
         parameters.put("instType", "SWAP");
 		String result = GetDataFromOkex.getPublicData("instruments", parameters);
@@ -114,7 +119,39 @@ public class StartServiceForOkex {
         		allSymbols.add(ticket);
         	}
         }
+        
+        */
+		ArrayList<Pair> allSymbols=new ArrayList<Pair>();
+		PairService pairService=new PairService();
+		allSymbols=pairService.getAllPairs();
         System.out.println(allSymbols.toString());
+        
         return allSymbols;
+	}
+	
+	private static void checkDataBasePairs() {
+		System.out.println("OKX:Started update DataBase Pairs at: "+new Date());
+		PairService pairService=new PairService();
+		Map<String, String> parameters=new HashMap<String, String>();
+        parameters.put("instType", "SWAP");
+		String result = GetDataFromOkex.getPublicData("instruments", parameters);
+		if (result==null) {
+    		System.out.println("Network error");
+    		return;
+
+		}
+        JSONArray symbols=new JSONObject(result).getJSONArray("data");
+        for (int i=0;i<symbols.length();i++) {
+        	JSONObject symbol=symbols.getJSONObject(i);
+        	if (symbol.getString("instId").indexOf("-USDT-")!=-1) {
+        		Pair ticket=new Pair(symbol);
+        		pairService.savePair(ticket);
+//        		Pair ticket=new Pair(symbol.getString("instId"));
+//        		ticket.setTickSz(symbol.getString("tickSz"));
+//        		ticket.setPrecition();
+
+        	}
+        }
+		
 	}
 }

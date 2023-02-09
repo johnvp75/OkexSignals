@@ -1,94 +1,28 @@
-2023-02-08 22:55:45.976[1675886145976] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 22:55:46.618[1675886146618] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 22:55:46.762[1675886146762] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 22:55:46.769[1675886146769] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 22:55:46.769[1675886146769] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 22:55:46.769[1675886146769] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 22:55:46.774[1675886146774] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 22:55:47.232[1675886147232] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 22:58:57.935[1675886337935] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 22:58:58.469[1675886338469] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 22:58:58.609[1675886338609] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 22:58:58.616[1675886338616] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 22:58:58.619[1675886338619] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 22:58:58.620[1675886338620] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 22:58:58.624[1675886338624] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 22:58:58.831[1675886338831] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 22:58:59.685[1675886339685] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@114a5e0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2023-02-08 22:59:00.031[1675886340031] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-08 23:15:47.645[1675887347645] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 23:15:48.479[1675887348479] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 23:15:48.674[1675887348674] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 23:15:48.685[1675887348685] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 23:15:48.686[1675887348686] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 23:15:48.686[1675887348686] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 23:15:48.694[1675887348694] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 23:15:48.949[1675887348949] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 23:15:49.996[1675887349996] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@114a5e0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2023-02-08 23:15:50.091[1675887350091] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-08 23:20:25.192[1675887625192] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 23:20:25.964[1675887625964] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 23:20:26.162[1675887626162] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 23:20:26.168[1675887626168] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 23:20:26.170[1675887626170] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 23:20:26.171[1675887626171] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 23:20:26.176[1675887626176] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 23:20:26.505[1675887626505] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 23:22:31.201[1675887751201] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 23:22:31.825[1675887751825] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 23:22:31.976[1675887751976] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 23:22:31.983[1675887751983] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 23:22:31.983[1675887751983] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 23:22:31.983[1675887751983] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 23:22:31.986[1675887751986] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 23:22:32.210[1675887752210] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 23:25:05.439[1675887905439] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 23:25:06.093[1675887906093] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 23:25:06.225[1675887906225] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 23:25:06.231[1675887906231] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 23:25:06.231[1675887906231] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 23:25:06.231[1675887906231] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 23:25:06.235[1675887906235] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 23:25:06.527[1675887906527] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 23:25:07.520[1675887907520] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@48581a3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2023-02-08 23:25:07.637[1675887907637] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-08 23:43:12.195[1675888992195] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 23:43:12.922[1675888992922] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 23:43:13.111[1675888993111] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 23:43:13.122[1675888993122] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 23:43:13.123[1675888993123] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 23:43:13.123[1675888993123] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 23:43:13.129[1675888993129] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 23:43:13.419[1675888993419] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 23:43:14.508[1675888994508] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@489bc8fd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2023-02-08 23:43:14.691[1675888994691] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-08 23:46:26.889[1675889186889] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 23:46:27.542[1675889187542] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 23:46:27.732[1675889187732] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 23:46:27.744[1675889187744] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 23:46:27.744[1675889187744] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 23:46:27.744[1675889187744] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 23:46:27.749[1675889187749] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 23:46:28.006[1675889188006] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 23:46:29.180[1675889189180] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@489bc8fd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2023-02-08 23:46:29.415[1675889189415] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-08 23:48:34.772[1675889314772] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 23:48:35.697[1675889315697] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 23:48:35.842[1675889315842] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 23:48:35.853[1675889315853] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 23:48:35.854[1675889315854] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 23:48:35.854[1675889315854] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 23:48:35.860[1675889315860] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 23:48:36.250[1675889316250] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 23:48:37.430[1675889317430] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@489bc8fd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2023-02-08 23:48:37.519[1675889317519] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-08 23:49:46.663[1675889386663] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-02-08 23:49:47.279[1675889387279] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-08 23:49:47.499[1675889387499] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2023-02-08 23:49:47.506[1675889387506] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
-2023-02-08 23:49:47.507[1675889387507] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
-2023-02-08 23:49:47.507[1675889387507] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
-2023-02-08 23:49:47.515[1675889387515] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-2023-02-08 23:49:47.757[1675889387757] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-02-08 23:49:48.790[1675889388790] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@489bc8fd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2023-02-08 23:49:48.872[1675889388872] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 22:59:41.301[1675972781301] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-02-09 22:59:42.100[1675972782100] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-09 22:59:42.247[1675972782247] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2023-02-09 22:59:42.256[1675972782256] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
+2023-02-09 22:59:42.257[1675972782257] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
+2023-02-09 22:59:42.266[1675972782266] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+2023-02-09 22:59:42.271[1675972782271] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2023-02-09 22:59:42.492[1675972782492] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-09 22:59:43.576[1675972783576] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1cb9ef52] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2023-02-09 22:59:43.795[1675972783795] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 23:10:52.625[1675973452625] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-02-09 23:10:53.260[1675973453260] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-09 23:10:53.406[1675973453406] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2023-02-09 23:10:53.412[1675973453412] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
+2023-02-09 23:10:53.413[1675973453413] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
+2023-02-09 23:10:53.413[1675973453413] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+2023-02-09 23:10:53.418[1675973453418] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2023-02-09 23:10:53.690[1675973453690] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-09 23:11:42.010[1675973502010] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-02-09 23:11:42.662[1675973502662] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-09 23:11:42.817[1675973502817] | WARN  | main       | o.hibernate.orm.connections.pooling  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2023-02-09 23:11:42.824[1675973502824] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost/OkexData]
+2023-02-09 23:11:42.825[1675973502825] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001001: Connection properties: {password=****, user=postgres}
+2023-02-09 23:11:42.825[1675973502825] | INFO  | main       | o.hibernate.orm.connections.pooling  - HHH10001003: Autocommit mode: false
+2023-02-09 23:11:42.830[1675973502830] | INFO  | main       | o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2023-02-09 23:11:43.126[1675973503126] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-09 23:11:44.088[1675973504088] | INFO  | main       | org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1d3c112a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2023-02-09 23:11:44.267[1675973504267] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]

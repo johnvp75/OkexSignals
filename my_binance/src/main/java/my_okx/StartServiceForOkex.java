@@ -154,4 +154,9 @@ public class StartServiceForOkex {
         }
 		
 	}
+	
+	private static void getNextBarsForStatistic(Pair pair) {
+		
+		
+	}
 }

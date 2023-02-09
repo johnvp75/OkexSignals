@@ -6,6 +6,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 import org.json.JSONArray;
 
 @Entity
-@Table (name = "Bars")
+@Table (name = "Bars", indexes = {@Index (name="openTime_index", columnList= "openTime, pair_id", unique=true)} )
 public class Bar {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)

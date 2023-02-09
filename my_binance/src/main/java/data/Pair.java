@@ -19,7 +19,7 @@ public class Pair {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int Id;
 	
-	@Column
+	@Column (length = 20, nullable = false, unique = true)
 	private String name;
 	
     @OneToMany(mappedBy = "pair", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -27,38 +27,38 @@ public class Pair {
 	
 //	private int precision;
 	
-	@Column
+	@Column (length = 10, nullable = false)
 	private String instType;
 	
-	@Column
+	@Column (length = 20, nullable = false)
 	private String uly;
 	
-	@Column
+	@Column (length = 20, nullable = false)
 	private String instFamily;
 	
-	@Column
+	@Column (length = 10)
 	private String baseCcy;
 	
-	@Column
+	@Column (length = 10)
 	private String quoteCcy;
 	
-	@Column
+	@Column (length = 10)
 	private String settleCcy;
 	
-	@Column
+	@Column 
 	private double ctVal;
 	
 	@Column
 	private int ctMult;
 	
-	@Column
+	@Column (length = 10)
 	private String ctValCcy;
 	
-	@Column
+	@Column (length = 1)
 	private String optType;
 	
-	@Column
-	private String stk;
+	@Column 
+	private double stk;
 	
 	@Column
 	private long listTime;
@@ -69,7 +69,7 @@ public class Pair {
 	@Column
 	private int lever;
 	
-	@Column
+	@Column (length = 20)
 	private String tickSz;
 	
 	@Column
@@ -78,13 +78,13 @@ public class Pair {
 	@Column
 	private int minSz;
 	
-	@Column
+	@Column (length = 10)
 	private String ctType;
 	
-	@Column
+	@Column (length = 20)
 	private String alias;
 	
-	@Column
+	@Column (length = 10)
 	private String state;
 	
 	@Column
@@ -126,7 +126,7 @@ public class Pair {
 		setCtMult(pair.getInt("ctMult"));
 		setCtValCcy(pair.getString("ctValCcy"));
 		setOptType(pair.getString("optType"));
-		setStk(pair.getString("stk"));
+		setStk(pair.optDouble("stk"));
 		setListTime(pair.getLong("listTime"));
 //		if(pair.getString("expTime").isEmpty())
 //			pair.;
@@ -241,7 +241,7 @@ public class Pair {
 	/**
 	 * @return the stk
 	 */
-	public String getStk() {
+	public double getStk() {
 		return stk;
 	}
 
@@ -427,7 +427,7 @@ public class Pair {
 	/**
 	 * @param stk the stk to set
 	 */
-	public void setStk(String stk) {
+	public void setStk(double stk) {
 		this.stk = stk;
 	}
 
